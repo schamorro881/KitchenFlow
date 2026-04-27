@@ -16,7 +16,7 @@ import { AuthService } from '../../core/services/auth.service';
           <span class="user">{{ auth.currentUser()?.userName }}</span>
           <button (click)="auth.logout()">Logout</button>
         } @else {
-          <a routerLink="/login">Login</a>
+          <a routerLink="/login" routerLinkActive="active">Login</a>
         }
       </nav>
     </header>
