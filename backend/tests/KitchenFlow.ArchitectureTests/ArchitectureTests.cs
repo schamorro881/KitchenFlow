@@ -5,6 +5,7 @@ using KitchenFlow.Domain.Common;
 using KitchenFlow.Infrastructure;
 using NetArchTest.eNet;
 using Xunit;
+using DependencyInjection = KitchenFlow.Infrastructure.DependencyInjection;
 
 namespace KitchenFlow.ArchitectureTests;
 

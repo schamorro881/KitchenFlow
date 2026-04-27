@@ -1,0 +1,7 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=688f2823_002Def83_002D4982_002D8fad_002D461cd1922a74/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="SetTargetTemperature_WhenTemperatureIsBelowZero_ShouldThrowDomainException" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::BFAF148C-4328-F86B-D740-3A5BCB038CE0::net10.0::KitchenFlow.UnitTests.Domain.Entities.CookingStationTests.SetTargetTemperature_WhenTemperatureIsBelowZero_ShouldThrowDomainException&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::BFAF148C-4328-F86B-D740-3A5BCB038CE0::net10.0::KitchenFlow.UnitTests.Domain.Entities.CookingStationTests.SetTargetTemperature_WhenTemperatureIsValid_ShouldUpdateTargetTemperature&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
