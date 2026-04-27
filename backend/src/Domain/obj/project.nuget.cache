@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rg7a0nTH09Y=",
+  "dgSpecHash": "TsqpfPF2yO4=",
   "success": true,
-  "projectFilePath": "f:\\Projects\\KitchenFlow\\backend\\src\\Domain\\KitchenFlow.Domain.csproj",
+  "projectFilePath": "F:\\Projects\\KitchenFlow\\backend\\src\\Domain\\KitchenFlow.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sheo\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512"
   ],

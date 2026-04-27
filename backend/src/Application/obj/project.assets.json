@@ -905,11 +905,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "f:\\Projects\\KitchenFlow\\backend\\src\\Application\\KitchenFlow.Application.csproj",
+      "projectUniqueName": "F:\\Projects\\KitchenFlow\\backend\\src\\Application\\KitchenFlow.Application.csproj",
       "projectName": "KitchenFlow.Application",
-      "projectPath": "f:\\Projects\\KitchenFlow\\backend\\src\\Application\\KitchenFlow.Application.csproj",
+      "projectPath": "F:\\Projects\\KitchenFlow\\backend\\src\\Application\\KitchenFlow.Application.csproj",
       "packagesPath": "C:\\Users\\Sheo\\.nuget\\packages\\",
-      "outputPath": "f:\\Projects\\KitchenFlow\\backend\\src\\Application\\obj\\",
+      "outputPath": "F:\\Projects\\KitchenFlow\\backend\\src\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Sheo\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -924,8 +924,8 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "f:\\Projects\\KitchenFlow\\backend\\src\\Domain\\KitchenFlow.Domain.csproj": {
-              "projectPath": "f:\\Projects\\KitchenFlow\\backend\\src\\Domain\\KitchenFlow.Domain.csproj"
+            "F:\\Projects\\KitchenFlow\\backend\\src\\Domain\\KitchenFlow.Domain.csproj": {
+              "projectPath": "F:\\Projects\\KitchenFlow\\backend\\src\\Domain\\KitchenFlow.Domain.csproj"
             }
           }
         }

@@ -1,0 +1,22 @@
+services:
+  db:
+    image: postgres:17
+    container_name: kitchenflow-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: yourpassword
+      POSTGRES_DB: KitchenFlow
+    ports:
+      - "5432:5432"
+    volumes:
+      - kitchenflow-db-data:/var/lib/postgresql
+    networks:
+      - kitchenflow-network
+    restart: always
+
+networks:
+  kitchenflow-network:
+    driver: bridge
+
+volumes:
+  kitchenflow-db-data:

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FZ+XBIjuoxQ=",
+  "dgSpecHash": "9dhdKhiCs8s=",
   "success": true,
-  "projectFilePath": "f:\\Projects\\KitchenFlow\\backend\\src\\Application\\KitchenFlow.Application.csproj",
+  "projectFilePath": "F:\\Projects\\KitchenFlow\\backend\\src\\Application\\KitchenFlow.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sheo\\.nuget\\packages\\automapper\\16.1.1\\automapper.16.1.1.nupkg.sha512",
     "C:\\Users\\Sheo\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",
