@@ -1,0 +1,32 @@
+name: CI Backend
+
+on:
+  push:
+    branches: [ main, master ]
+    paths:
+      - 'backend/**'
+  pull_request:
+    branches: [ main, master ]
+    paths:
+      - 'backend/**'
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 10.0.x # Ajustado a la versión detectada en el csproj
+
+    - name: Restore dependencies
+      run: dotnet restore backend/KitchenFlow.slnx
+
+    - name: Build
+      run: dotnet build backend/KitchenFlow.slnx --no-restore --configuration Release
+
+    - name: Test
+      run: dotnet test backend/KitchenFlow.slnx --no-build --configuration Release --verbosity normal

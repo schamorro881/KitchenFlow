@@ -1,0 +1,40 @@
+# .NET
+[Bb]in/
+[Oo]bj/
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+.vscode/
+.idea/
+*.swp
+*.lut
+*.cache
+Debug/
+Release/
+
+# EF Core
+*.db
+*.db-shm
+*.db-wal
+
+# Node/Angular
+node_modules/
+dist/
+.angular/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.projections.json
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+!.vscode/tasks.json
+
+# Docker
+.docker/
+
+# OS
+.DS_Store
+Thumbs.db
