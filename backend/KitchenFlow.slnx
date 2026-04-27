@@ -12,4 +12,9 @@
   <Folder Name="/src/Infrastructure/">
     <Project Path="src/Infrastructure/KitchenFlow.Infrastructure.csproj" />
   </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/KitchenFlow.ArchitectureTests/KitchenFlow.ArchitectureTests.csproj" />
+    <Project Path="tests/KitchenFlow.IntegrationTests/KitchenFlow.IntegrationTests.csproj" />
+    <Project Path="tests/KitchenFlow.UnitTests/KitchenFlow.UnitTests.csproj" />
+  </Folder>
 </Solution>
