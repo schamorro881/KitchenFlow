@@ -1,0 +1,15 @@
+f:\Projects\KitchenFlow\backend\src\Application\obj\Debug\net10.0\KitchenFlow.Application.csproj.AssemblyReference.cache
+f:\Projects\KitchenFlow\backend\src\Application\obj\Debug\net10.0\KitchenFlow.Application.GeneratedMSBuildEditorConfig.editorconfig
+f:\Projects\KitchenFlow\backend\src\Application\obj\Debug\net10.0\KitchenFlow.Application.AssemblyInfoInputs.cache
+f:\Projects\KitchenFlow\backend\src\Application\obj\Debug\net10.0\KitchenFlow.Application.AssemblyInfo.cs
+f:\Projects\KitchenFlow\backend\src\Application\obj\Debug\net10.0\KitchenFlow.Application.csproj.CoreCompileInputs.cache
+f:\Projects\KitchenFlow\backend\src\Application\bin\Debug\net10.0\KitchenFlow.Application.deps.json
+f:\Projects\KitchenFlow\backend\src\Application\bin\Debug\net10.0\KitchenFlow.Application.dll
+f:\Projects\KitchenFlow\backend\src\Application\bin\Debug\net10.0\KitchenFlow.Application.pdb
+f:\Projects\KitchenFlow\backend\src\Application\bin\Debug\net10.0\KitchenFlow.Domain.dll
+f:\Projects\KitchenFlow\backend\src\Application\bin\Debug\net10.0\KitchenFlow.Domain.pdb
+f:\Projects\KitchenFlow\backend\src\Application\obj\Debug\net10.0\KitchenF.AB3F3C5E.Up2Date
+f:\Projects\KitchenFlow\backend\src\Application\obj\Debug\net10.0\KitchenFlow.Application.dll
+f:\Projects\KitchenFlow\backend\src\Application\obj\Debug\net10.0\refint\KitchenFlow.Application.dll
+f:\Projects\KitchenFlow\backend\src\Application\obj\Debug\net10.0\KitchenFlow.Application.pdb
+f:\Projects\KitchenFlow\backend\src\Application\obj\Debug\net10.0\ref\KitchenFlow.Application.dll

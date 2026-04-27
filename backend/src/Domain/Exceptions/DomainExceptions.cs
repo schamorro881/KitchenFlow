@@ -1,0 +1,28 @@
+namespace KitchenFlow.Domain.Exceptions;
+
+public class DomainException : Exception
+{
+    public DomainException(string message) : base(message) { }
+}
+
+public class NotFoundException : DomainException
+{
+    public NotFoundException(string name, object key)
+        : base($"Entity \"{name}\" ({key}) was not found.") { }
+}
+
+public class ValidationException : DomainException
+{
+    public IReadOnlyDictionary<string, string[]> Errors { get; }
+
+    public ValidationException(IDictionary<string, string[]> errors)
+        : base("One or more validation failures have occurred.")
+    {
+        Errors = errors.AsReadOnly();
+    }
+}
+
+public class ForbiddenAccessException : DomainException
+{
+    public ForbiddenAccessException() : base("Access is forbidden.") { }
+}
