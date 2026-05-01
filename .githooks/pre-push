@@ -1,0 +1,55 @@
+#!/bin/sh
+
+echo "================================================="
+echo "🍳 KitchenFlow Pre-Push Hook"
+echo "================================================="
+
+# Variables
+EXIT_CODE=0
+
+echo "\n📦 [1/3] Construyendo el Backend (.NET)..."
+cd backend || exit 1
+dotnet build
+if [ $? -ne 0 ]; then
+  echo "❌ El build del Backend falló."
+  EXIT_CODE=1
+else
+  echo "✅ Build del Backend exitoso."
+fi
+
+echo "\n🧪 [2/3] Ejecutando pruebas del Backend..."
+dotnet test
+if [ $? -ne 0 ]; then
+  echo "❌ Las pruebas del Backend fallaron."
+  EXIT_CODE=1
+else
+  echo "✅ Pruebas del Backend exitosas."
+fi
+
+# Volver a la raíz y entrar a frontend
+cd ..
+echo "\n🌐 [3/3] Construyendo el Frontend (Angular)..."
+cd frontend || exit 1
+npm run build
+if [ $? -ne 0 ]; then
+  echo "❌ El build del Frontend falló."
+  EXIT_CODE=1
+else
+  echo "✅ Build del Frontend exitoso."
+fi
+
+# Volver a la raíz
+cd ..
+
+if [ $EXIT_CODE -ne 0 ]; then
+  echo "\n================================================="
+  echo "🚫 ERRORES DETECTADOS. El Push fue cancelado."
+  echo "Soluciona los errores arriba antes de volver a intentar."
+  echo "================================================="
+  exit 1
+else
+  echo "\n================================================="
+  echo "🚀 Todo se ve genial. Subiendo cambios..."
+  echo "================================================="
+  exit 0
+fi
