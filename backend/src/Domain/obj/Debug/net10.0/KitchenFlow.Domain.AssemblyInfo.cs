@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KitchenFlow.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+db06ff6f41d5cbbfa8321219b0a9ca79eb3d3fba")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e23ee2bdd7c2e3b99f17ea1f6f9bf823fa65095c")]
 [assembly: System.Reflection.AssemblyProductAttribute("KitchenFlow.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KitchenFlow.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

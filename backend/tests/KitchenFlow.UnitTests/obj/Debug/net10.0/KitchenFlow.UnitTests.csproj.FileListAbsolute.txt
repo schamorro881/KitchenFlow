@@ -125,3 +125,4 @@ F:\Projects\KitchenFlow\backend\tests\KitchenFlow.UnitTests\obj\Debug\net10.0\re
 F:\Projects\KitchenFlow\backend\tests\KitchenFlow.UnitTests\obj\Debug\net10.0\KitchenFlow.UnitTests.pdb
 F:\Projects\KitchenFlow\backend\tests\KitchenFlow.UnitTests\obj\Debug\net10.0\KitchenFlow.UnitTests.genruntimeconfig.cache
 F:\Projects\KitchenFlow\backend\tests\KitchenFlow.UnitTests\obj\Debug\net10.0\ref\KitchenFlow.UnitTests.dll
+F:\Projects\KitchenFlow\backend\tests\KitchenFlow.UnitTests\obj\Debug\net10.0\KitchenFlow.UnitTests.sourcelink.json
