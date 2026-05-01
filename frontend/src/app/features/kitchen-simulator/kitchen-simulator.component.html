@@ -1,1 +1,13 @@
-<p>kitchen-simulator works!</p>
+<div class="simulator-board">
+    <h2>Centro de Cocción</h2>
+
+    <div class="stations-grid" style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+        @for (station of stations(); track station.id) {
+
+        <app-cooking-station-card [stationId]="station.id" [stationName]="station.name"
+            [temperature]="station.currentTemp" (turnOff)="handleTurnOff($event)">
+        </app-cooking-station-card>
+
+        }
+    </div>
+</div>

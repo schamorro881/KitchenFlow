@@ -1,0 +1,18 @@
+<div class="station-card">
+    <header class="card-header">
+        <!-- Para mostrar un Signal en el HTML, se lo llama con paréntesis () -->
+        <h3>{{ stationName() }}</h3>
+    </header>
+
+    <div class="card-body">
+        <div class="temperature-display">
+            <span class="label">Temp. Objetivo:</span>
+            <span class="value">{{ temperature() }}°C</span>
+        </div>
+
+        <button (click)="onTurnOffClick()"
+            style="margin-top: 1rem; width: 100%; padding: 0.5rem; background-color: var(--text-main); color: white; border: none; border-radius: 4px; cursor: pointer;">
+            Apagar Estación
+        </button>
+    </div>
+</div>
