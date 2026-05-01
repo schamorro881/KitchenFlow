@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KitchenFlow.ArchitectureTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80e4c87d3302db9371a3ddb7bca37fbdd578c0c7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+64f290710c80666e3a362f49b2d3cc8a6f2c75e9")]
 [assembly: System.Reflection.AssemblyProductAttribute("KitchenFlow.ArchitectureTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KitchenFlow.ArchitectureTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
