@@ -44,11 +44,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "f:\\Projects\\KitchenFlow\\backend\\src\\Domain\\KitchenFlow.Domain.csproj",
+      "projectUniqueName": "F:\\Projects\\KitchenFlow\\backend\\src\\Domain\\KitchenFlow.Domain.csproj",
       "projectName": "KitchenFlow.Domain",
-      "projectPath": "f:\\Projects\\KitchenFlow\\backend\\src\\Domain\\KitchenFlow.Domain.csproj",
+      "projectPath": "F:\\Projects\\KitchenFlow\\backend\\src\\Domain\\KitchenFlow.Domain.csproj",
       "packagesPath": "C:\\Users\\Sheo\\.nuget\\packages\\",
-      "outputPath": "f:\\Projects\\KitchenFlow\\backend\\src\\Domain\\obj\\",
+      "outputPath": "F:\\Projects\\KitchenFlow\\backend\\src\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Sheo\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -17,3 +17,4 @@ f:\Projects\KitchenFlow\backend\src\Infrastructure\obj\Debug\net10.0\refint\Kitc
 f:\Projects\KitchenFlow\backend\src\Infrastructure\obj\Debug\net10.0\KitchenFlow.Infrastructure.pdb
 f:\Projects\KitchenFlow\backend\src\Infrastructure\obj\Debug\net10.0\KitchenFlow.Infrastructure.genruntimeconfig.cache
 f:\Projects\KitchenFlow\backend\src\Infrastructure\obj\Debug\net10.0\ref\KitchenFlow.Infrastructure.dll
+F:\Projects\KitchenFlow\backend\src\Infrastructure\obj\Debug\net10.0\KitchenFlow.Infrastructure.sourcelink.json

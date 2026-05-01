@@ -3,7 +3,7 @@ using KitchenFlow.Api;
 using KitchenFlow.Application;
 using KitchenFlow.Domain.Common;
 using KitchenFlow.Infrastructure;
-using NetArchTest.eNet;
+using NetArchTest.Rules;
 using Xunit;
 using DependencyInjection = KitchenFlow.Infrastructure.DependencyInjection;
 
@@ -44,7 +44,7 @@ public class ArchitectureTests
     public void Application_Should_Not_Have_Dependency_On_Infrastructure_And_Api()
     {
         // Arrange
-        var assembly = typeof(DependencyInjection).Assembly;
+        var assembly = typeof(KitchenFlow.Application.DependencyInjection).Assembly;
 
         var otherProjects = new[]
         {

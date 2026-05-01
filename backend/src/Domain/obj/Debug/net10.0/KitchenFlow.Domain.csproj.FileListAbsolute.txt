@@ -10,3 +10,4 @@ f:\Projects\KitchenFlow\backend\src\Domain\obj\Debug\net10.0\KitchenFlow.Domain.
 f:\Projects\KitchenFlow\backend\src\Domain\obj\Debug\net10.0\refint\KitchenFlow.Domain.dll
 f:\Projects\KitchenFlow\backend\src\Domain\obj\Debug\net10.0\KitchenFlow.Domain.pdb
 f:\Projects\KitchenFlow\backend\src\Domain\obj\Debug\net10.0\ref\KitchenFlow.Domain.dll
+F:\Projects\KitchenFlow\backend\src\Domain\obj\Debug\net10.0\KitchenFlow.Domain.sourcelink.json
