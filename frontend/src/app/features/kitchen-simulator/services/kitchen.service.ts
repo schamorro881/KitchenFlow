@@ -1,4 +1,4 @@
-import { inject, Injectable, signal } from '@angular/core';
+﻿import { inject, Injectable, signal } from '@angular/core';
 import { HubConnection, HubConnectionBuilder } from '@microsoft/signalr';
 import { Subject } from 'rxjs';
 
@@ -13,7 +13,7 @@ export class KitchenService {
     { id: 3, name: 'Freidora', currentTemp: 170 }
   ]);
 
-  // Evento para que los componentes reaccionen cuando un plato está listo
+  // Evento para que los componentes reaccionen cuando un plato estÃ¡ listo
   readonly mealReady$ = new Subject<{ stationId: number, dishName: string }>();
 
   private hubConnection: HubConnection | undefined;
@@ -30,7 +30,7 @@ export class KitchenService {
 
     this.hubConnection.start()
       .then(() => {
-        console.log('🔌 Conectado al motor SignalR');
+        console.log('ðŸ”Œ Conectado al motor SignalR');
         this.escucharEventosDelServidor();
       })
       .catch((err: any) => console.error('Error SignalR:', err));
@@ -46,7 +46,7 @@ export class KitchenService {
     });
 
     this.hubConnection?.on('MealReady', (stationId: number, dishName: string) => {
-      console.log(`🍳 Servidor: Plato listo -> ${dishName}`);
+      console.log(`ðŸ³ Servidor: Plato listo -> ${dishName}`);
       this.mealReady$.next({ stationId, dishName });
     });
   }

@@ -1,4 +1,4 @@
-﻿using KitchenFlow.Domain.Entities.Enums;
+using KitchenFlow.Domain.Entities.Enums;
 using KitchenFlow.Domain.Exceptions;
 
 namespace KitchenFlow.Domain.Entities;
@@ -28,6 +28,8 @@ public class Order
     public Order(int tableNumber)
     {
         TableNumber = tableNumber;
+        Comments = string.Empty;
+        CreatedAt = DateTime.UtcNow;
     }
 
     public void AddOrdenItem(int dishId, int quantity, string notes = "")

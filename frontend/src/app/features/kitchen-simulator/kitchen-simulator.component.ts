@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+﻿import { Component, inject, signal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { CookingStationCardComponent } from './components/cooking-station-card/cooking-station-card.component';
 import { KitchenService } from './services/kitchen.service';
@@ -42,7 +42,7 @@ export class KitchenSimulatorComponent {
     
     this.notifications.update(prev => [...prev, newNotification]);
 
-    // Desaparecer después de 6 segundos
+    // Desaparecer despuÃ©s de 6 segundos
     setTimeout(() => {
       this.removeNotification(id);
     }, 6000);

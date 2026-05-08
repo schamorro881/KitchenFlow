@@ -1,4 +1,4 @@
-import { Injectable, inject, signal } from '@angular/core';
+﻿import { Injectable, inject, signal } from '@angular/core';
 import { ApiService } from './api.service';
 import { User, Result } from '../models/api.models';
 import { tap, map } from 'rxjs';
@@ -39,3 +39,4 @@ export class AuthService {
     return userStr ? JSON.parse(userStr) : null;
   }
 }
+

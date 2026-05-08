@@ -1,4 +1,4 @@
-export interface Result<T> {
+﻿export interface Result<T> {
   isSuccess: boolean;
   value?: T;
   error?: string;
@@ -20,3 +20,4 @@ export interface User {
   email: string;
   token?: string;
 }
+

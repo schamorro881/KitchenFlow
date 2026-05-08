@@ -1,5 +1,4 @@
 import { Component, input, output, signal, inject } from '@angular/core';
-import { TuiButton, TuiLoader } from '@taiga-ui/core';
 import { KitchenService } from '../../services/kitchen.service';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { filter } from 'rxjs';
@@ -7,48 +6,39 @@ import { filter } from 'rxjs';
 @Component({
   selector: 'app-cooking-station-card',
   standalone: true,
-  imports: [TuiButton, TuiLoader],
+  imports: [],
   template: `
 <div class="station-card-container">
     <div class="station-card-inner" [class.hot]="temperature() > 200">
         <h3 class="station-title">{{ stationName() }}</h3>
-        
+
         <div class="station-content">
             <div class="temperature-display">
-                <span class="label">Potencia Térmica</span>
+                <span class="label">Potencia Termica</span>
                 <span class="value" [class.error]="temperature() > 200" [class.info]="temperature() <= 200">
-                    {{ temperature() }}°C
+                    {{ temperature() }} C
                 </span>
             </div>
 
             <div class="heat-meter">
-                <div class="heat-fill" 
-                     [style.width.%]="(temperature() / 300) * 100"
-                     [style.background]="temperature() > 200 ? '#ef4444' : '#3b82f6'">
+                <div class="heat-fill"
+                     [style.width.%]="(temperature() / 300) * 100">
                 </div>
             </div>
 
             <div class="actions-section">
-                <tui-loader [loading]="isCooking()" [inheritColor]="true">
-                    <button
-                        tuiButton
-                        appearance="primary"
-                        size="m"
-                        class="action-btn"
-                        [disabled]="isCooking()"
-                        (click)="onCookClick()">
-                        {{ isCooking() ? 'Cocinando...' : '🚀 Iniciar Cocción' }}
-                    </button>
-                </tui-loader>
+                <button
+                    class="action-btn btn-cook"
+                    [disabled]="isCooking()"
+                    (click)="onCookClick()">
+                    {{ isCooking() ? 'Cocinando...' : 'Iniciar Coccion' }}
+                </button>
 
                 <button
-                    tuiButton
-                    appearance="secondary-destructive"
-                    size="s"
-                    class="action-btn"
+                    class="action-btn btn-off"
                     [disabled]="isCooking()"
                     (click)="onTurnOffClick()">
-                    ⚡ Desactivar
+                    Desactivar Estacion
                 </button>
             </div>
         </div>

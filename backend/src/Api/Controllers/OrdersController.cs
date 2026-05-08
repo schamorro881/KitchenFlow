@@ -1,4 +1,4 @@
-﻿using KitchenFlow.Application.Commands.AddOrderItem;
+using KitchenFlow.Application.Commands.AddOrderItem;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,6 +18,13 @@ public class OrdersController : Controller
     public IActionResult Index()
     {
         return View();
+    }
+    
+    [HttpGet]
+    public async Task<IActionResult> GetOrders([FromServices] KitchenFlow.Application.Common.Interfaces.IApplicationDbContext context)
+    {
+        var orders = await Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync(context.Orders);
+        return Ok(orders);
     }
     
     [HttpPost("{orderId}/items")]

@@ -1,4 +1,4 @@
-import { HttpInterceptorFn } from '@angular/common/http';
+﻿import { HttpInterceptorFn } from '@angular/common/http';
 
 export const jwtInterceptor: HttpInterceptorFn = (req, next) => {
   const token = localStorage.getItem('token');
@@ -13,3 +13,4 @@ export const jwtInterceptor: HttpInterceptorFn = (req, next) => {
   
   return next(req);
 };
+

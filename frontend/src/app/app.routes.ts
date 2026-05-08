@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
 
 export const routes: Routes = [
-  // 1. Rutas de Autenticación (Sin Layout)
+  // 1. Rutas de AutenticaciÃ³n (Sin Layout)
   {
     path: 'login',
     loadComponent: () => import('./features/auth/login/login.component').then(m => m.LoginComponent)
@@ -21,7 +21,15 @@ export const routes: Routes = [
         path: 'simulator',
         loadComponent: () => import('./features/kitchen-simulator/kitchen-simulator.component').then(m => m.KitchenSimulatorComponent)
       },
-      // Aquí podés agregar más rutas "hijas" que compartan el mismo Layout
+      {
+        path: 'orders',
+        loadComponent: () => import('./features/pos/order-dashboard/order-dashboard.component').then(m => m.OrderDashboardComponent)
+      },
+      {
+        path: 'orders/new',
+        loadComponent: () => import('./features/pos/order-create/order-create.component').then(m => m.OrderCreateComponent)
+      },
+      // AquÃ­ podÃ©s agregar mÃ¡s rutas "hijas" que compartan el mismo Layout
       {
         path: '',
         redirectTo: 'simulator',
@@ -30,7 +38,7 @@ export const routes: Routes = [
     ]
   },
 
-  // 3. Comodín (Redirect por si el usuario escribe cualquier cosa)
+  // 3. ComodÃ­n (Redirect por si el usuario escribe cualquier cosa)
   {
     path: '**',
     redirectTo: 'simulator'

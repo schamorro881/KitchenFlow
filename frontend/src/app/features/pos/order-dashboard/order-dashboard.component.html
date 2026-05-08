@@ -1,0 +1,81 @@
+<div class="dashboard-container">
+  <header class="dashboard-header">
+    <div class="header-info">
+      <h1>Gestión de <span>Comandas</span></h1>
+      <p>Control de mesas y órdenes activas</p>
+    </div>
+    <div class="header-actions">
+      <button class="btn-primary" (click)="openCreatePanel()">
+        <span class="icon">＋</span> Nueva Comanda
+      </button>
+    </div>
+  </header>
+
+  <div class="dashboard-content">
+    <div class="orders-grid">
+      <div class="order-card" *ngFor="let order of activeOrders()">
+        <div class="card-header" [ngClass]="order.status.toLowerCase()">
+          <span class="table-badge">Mesa {{order.tableNumber}}</span>
+          <span class="status-badge">{{order.status}}</span>
+        </div>
+        <div class="card-body">
+          <div class="info-row">
+            <span class="label">Items:</span>
+            <span class="value">{{order.itemCount}} platos</span>
+          </div>
+          <div class="info-row">
+            <span class="label">Tiempo:</span>
+            <span class="value">{{order.timeElapsed}}</span>
+          </div>
+          <div class="total-row">
+            <span class="label">Total</span>
+            <span class="value">${{order.total}}</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="btn-secondary" routerLink="/orders/new">Agregar Platos</button>
+          <button class="btn-details">Ver Detalle</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Side Panel para crear nueva comanda -->
+  <div class="side-panel-overlay" [class.open]="isCreatingOrder()" (click)="closeCreatePanel()"></div>
+  <aside class="side-panel" [class.open]="isCreatingOrder()">
+    <div class="panel-header">
+      <button class="close-btn" (click)="closeCreatePanel()">✕</button>
+      <h2>Abrir Nueva Mesa</h2>
+    </div>
+
+    <div class="panel-content">
+      <div class="skeleton-form">
+        <div class="form-group">
+          <label>Número de Mesa</label>
+          <select class="skeleton-input">
+            <option>Mesa 1</option>
+            <option>Mesa 2</option>
+            <option>Mesa 4 (Disponible)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Mesero</label>
+          <input type="text" class="skeleton-input" placeholder="Nombre del mesero">
+        </div>
+        <div class="form-group">
+          <label>Comensales</label>
+          <input type="number" class="skeleton-input" value="2">
+        </div>
+        <div class="form-group">
+          <label>Aclaraciones Iniciales</label>
+          <textarea class="skeleton-input" rows="3" placeholder="Ej: Festejo de cumpleaños..."></textarea>
+        </div>
+
+        <div class="panel-actions">
+          <button class="btn-cancel" (click)="closeCreatePanel()">Cancelar</button>
+          <button class="btn-submit">Abrir Comanda</button>
+        </div>
+      </div>
+    </div>
+  </aside>
+</div>

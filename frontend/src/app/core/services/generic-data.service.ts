@@ -1,4 +1,4 @@
-import { inject } from '@angular/core';
+﻿import { inject } from '@angular/core';
 import { ApiService } from './api.service';
 import { Observable } from 'rxjs';
 import { PaginatedList } from '../models/api.models';
@@ -31,3 +31,4 @@ export abstract class GenericDataService<T> {
     return this.api.delete<void>(`${this.endpoint}/${id}`);
   }
 }
+

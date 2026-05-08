@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+﻿import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { KitchenSimulatorComponent } from './kitchen-simulator.component';
 
@@ -21,3 +21,4 @@ describe('KitchenSimulatorComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
