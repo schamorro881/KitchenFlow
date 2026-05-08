@@ -1,4 +1,5 @@
 ﻿using KitchenFlow.Domain.Entities.Enums;
+using KitchenFlow.Domain.Exceptions;
 
 namespace KitchenFlow.Domain.Entities;
 
@@ -24,15 +25,30 @@ public class Order
         Comments = comments;
     }
 
+    public Order(int tableNumber)
+    {
+        TableNumber = tableNumber;
+    }
+
     public void AddOrdenItem(int dishId, int quantity, string notes = "")
     {
         if(OrderState == OrderState.Canceled || OrderState == OrderState.Delivered)
         {
-            throw new InvalidOperationException("Cannot add items to a canceled or delivered order.");
+            throw new DomainException("Cannot add items to a canceled or delivered order.");
         }
 
         var newItem = new OrderItem(dishId, quantity, notes);
         _items.Add(newItem);
+    }
+    
+    public void MarkAsDelivered()
+    {
+        if (OrderState == OrderState.Canceled)
+        {
+            throw new DomainException("Cannot mark a canceled order as delivered.");
+        }
+        
+        OrderState = OrderState.Delivered;
     }
     
 }
