@@ -1,12 +1,14 @@
 ﻿using KitchenFlow.Domain.Exceptions;
 
-namespace DefaultNamespace;
+namespace KitchenFlow.Domain.Entities;
 
 public class CookingStation
 {
-    private int Id {get; set; }
-    private string Name { get; set; }
+    public int Id {get; private set; }
+    public string Name { get; private set; }
     public int TargetTemperature { get; private set; }
+    public int CurrentTemperature { get; private set; }
+    public bool IsActive { get; private set; } = false;
 
 
     public CookingStation(int id, string name, int targetTemperature)
@@ -21,6 +23,14 @@ public class CookingStation
         Name = name;
     }
 
+    public CookingStation(string name, int targetTemperature, int currentTemperature, bool isActive)
+    {
+        Name = name;
+        TargetTemperature = targetTemperature;
+        CurrentTemperature = currentTemperature;
+        IsActive = isActive;
+    }
+
     public void SetTargetTemperature(int targetTemperature)
     {
             if (targetTemperature < 0)
@@ -29,5 +39,20 @@ public class CookingStation
             }
             
             TargetTemperature = targetTemperature;
+    }
+
+
+    public void TurnOff()
+    {
+        if (IsActive)
+        {
+            this.IsActive = false;
+            this.TargetTemperature = 0;
+        }
+        else
+        {
+            throw new DomainException("The station is already off");
+        }
+       
     }
 }

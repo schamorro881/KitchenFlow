@@ -16,4 +16,14 @@ public class KitchenHub : Hub
         // Le pasamos el ID de la estación y la nueva temperatura (0).
         await Clients.All.SendAsync("StationUpdated", stationId, 0);
     }
+
+    public async Task PlaceAnOrderAsync(int stationId, string dishName, int cookingTimeSeconds)
+    {
+        await Task.Delay(TimeSpan.FromSeconds(cookingTimeSeconds));
+        await Clients.All.SendAsync("MealReady", stationId, dishName);
+    }
+    
+    
+    
+    
 }

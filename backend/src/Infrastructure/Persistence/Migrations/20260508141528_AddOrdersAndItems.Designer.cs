@@ -3,6 +3,7 @@ using System;
 using KitchenFlow.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace KitchenFlow.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260508141528_AddOrdersAndItems")]
+    partial class AddOrdersAndItems
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -59,22 +62,20 @@ namespace KitchenFlow.Infrastructure.Persistence.Migrations
 
                     b.Property<string>("Comments")
                         .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("character varying(500)");
+                        .HasColumnType("text");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("OrderState")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<int>("OrderState")
+                        .HasColumnType("integer");
 
                     b.Property<int>("TableNumber")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Orders", (string)null);
+                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("KitchenFlow.Domain.Entities.OrderItem", b =>
@@ -88,13 +89,11 @@ namespace KitchenFlow.Infrastructure.Persistence.Migrations
                     b.Property<int>("DishId")
                         .HasColumnType("integer");
 
-                    b.Property<string>("ItemState")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<int>("ItemState")
+                        .HasColumnType("integer");
 
                     b.Property<string>("Notes")
-                        .HasMaxLength(500)
-                        .HasColumnType("character varying(500)");
+                        .HasColumnType("text");
 
                     b.Property<int?>("OrderId")
                         .HasColumnType("integer");
@@ -106,7 +105,7 @@ namespace KitchenFlow.Infrastructure.Persistence.Migrations
 
                     b.HasIndex("OrderId");
 
-                    b.ToTable("OrderItems", (string)null);
+                    b.ToTable("OrderItems");
                 });
 
             modelBuilder.Entity("KitchenFlow.Domain.Entities.OrderItem", b =>

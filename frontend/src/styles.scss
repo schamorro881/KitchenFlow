@@ -1,15 +1,33 @@
 /* src/styles.scss */
+
 :root {
-    --primary-color: #800020;
-    /* Borgoña corporativo */
-    --background-light: #f4f4f5;
-    --text-main: #2d3748;
+    --tui-background-base: #0f172a;
+    --tui-text-primary: #f8fafc;
+    --tui-text-secondary: #94a3b8;
+    --tui-status-positive: #10b981;
+    --tui-status-error: #ef4444;
 }
 
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: var(--background-light);
-    color: var(--text-main);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: radial-gradient(circle at top right, #1e293b, #0f172a);
+    color: var(--tui-text-primary);
+    min-height: 100vh;
+}
+
+// Estilo para el scrollbar tipo Taiga
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #475569;
 }

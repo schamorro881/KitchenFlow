@@ -11,7 +11,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^19.2.21",
-    "@angular/cdk": "^21.2.8",
+    "@angular/cdk": "^19.2.0",
     "@angular/common": "^19.2.0",
     "@angular/compiler": "^19.2.0",
     "@angular/core": "^19.2.0",
@@ -19,6 +19,10 @@
     "@angular/platform-browser": "^19.2.0",
     "@angular/platform-browser-dynamic": "^19.2.0",
     "@angular/router": "^19.2.0",
+    "@maskito/angular": "^5.2.2",
+    "@maskito/core": "^5.2.2",
+    "@maskito/kit": "^5.2.2",
+    "@maskito/phone": "^5.2.2",
     "@microsoft/signalr": "^10.0.0",
     "@ng-web-apis/common": "^5.2.0",
     "@ng-web-apis/intersection-observer": "^5.2.0",
@@ -36,6 +40,7 @@
     "@taiga-ui/kit": "^5.3.0",
     "@taiga-ui/polymorpheus": "^5.0.0",
     "@taiga-ui/styles": "^5.3.0",
+    "libphonenumber-js": "^1.12.42",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"

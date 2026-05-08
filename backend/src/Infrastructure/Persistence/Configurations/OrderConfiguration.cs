@@ -35,9 +35,10 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
                .SetPropertyAccessMode(PropertyAccessMode.Field);
 
         // 5. Relación 1:N con OrderItems
+        // Usamos HasForeignKey con string porque OrderId es una shadow property en OrderItem
         builder.HasMany(x => x.Items)
                .WithOne()
-               .HasForeignKey(oi => oi.OrderId);
+               .HasForeignKey("OrderId");
     }
 }
 

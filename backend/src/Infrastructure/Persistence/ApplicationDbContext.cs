@@ -1,5 +1,6 @@
 using KitchenFlow.Application.Common.Interfaces;
 using KitchenFlow.Domain.Common;
+using KitchenFlow.Domain.Entities;
 using KitchenFlow.Domain.Events;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -13,6 +14,9 @@ public class ApplicationDbContext(
     : DbContext(options), IApplicationDbContext
 {
     // Add your DbSets here
+    public DbSet<CookingStation> CookingStations => Set<CookingStation>();
+    public DbSet<Order> Orders => Set<Order>();
+    public DbSet<OrderItem> OrderItems => Set<OrderItem>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

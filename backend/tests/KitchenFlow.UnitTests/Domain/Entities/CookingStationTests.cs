@@ -1,5 +1,5 @@
-using DefaultNamespace;
 using FluentAssertions;
+using KitchenFlow.Domain.Entities;
 using KitchenFlow.Domain.Exceptions;
 using Xunit;
 // using KitchenFlow.Domain.Entities; // <-- Esto va a fallar pronto
@@ -34,5 +34,18 @@ public class CookingStationTests
         
         station.TargetTemperature.Should().Be(180);
     }
+
+
+    [Fact]
+    public void TurnOff_ShouldSetTargetTemperatureToZero()
+    {
+        
+        var station = new CookingStation("Main board", 180,120, true);
+        station.TurnOff();
+        Assert.Equal(0, station.TargetTemperature);
+
+    }
     
+   
+
 }

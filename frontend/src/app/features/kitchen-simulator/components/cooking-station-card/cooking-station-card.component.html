@@ -1,18 +1,36 @@
-<div class="station-card">
-    <header class="card-header">
-        <!-- Para mostrar un Signal en el HTML, se lo llama con paréntesis () -->
-        <h3>{{ stationName() }}</h3>
-    </header>
+<div class="station-card-container">
+    <div tuiIsland class="station-island">
+        <h3 class="tui-island__title">{{ stationName() }}</h3>
+        
+        <div class="tui-island__content">
+            <div class="temperature-section">
+                <span class="label">Temp. Actual:</span>
+                <tui-badge 
+                    [appearance]="temperature() > 200 ? 'error' : 'info'"
+                    class="temp-badge">
+                    {{ temperature() }}°C
+                </tui-badge>
+            </div>
 
-    <div class="card-body">
-        <div class="temperature-display">
-            <span class="label">Temp. Objetivo:</span>
-            <span class="value">{{ temperature() }}°C</span>
+            <div class="actions-section">
+                <button
+                    tuiButton
+                    appearance="secondary-destructive"
+                    size="s"
+                    class="action-btn"
+                    (click)="onTurnOffClick()">
+                    Apagar Estación
+                </button>
+                
+                <button
+                    tuiButton
+                    appearance="primary"
+                    size="s"
+                    class="action-btn"
+                    (click)="onCookClick()">
+                    Cocinar Pato (5s)
+                </button>
+            </div>
         </div>
-
-        <button (click)="onTurnOffClick()"
-            style="margin-top: 1rem; width: 100%; padding: 0.5rem; background-color: var(--text-main); color: white; border: none; border-radius: 4px; cursor: pointer;">
-            Apagar Estación
-        </button>
     </div>
 </div>

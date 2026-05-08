@@ -1,13 +1,52 @@
-<div class="simulator-board">
-    <h2>Centro de Cocción</h2>
+<div class="simulator-container">
+    <header class="simulator-header">
+        <div class="header-info">
+            <h2 class="tui-text_h3">Kitchen Commander</h2>
+            <p>Control de Operaciones Tácticas</p>
+        </div>
+        
+        <div class="kitchen-stats">
+            <div class="stat-item">
+                <span class="stat-label">Nivel de Cocina</span>
+                <span class="stat-value">LVL 12</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Reputación</span>
+                <span class="stat-value">⭐ 4.8</span>
+            </div>
+        </div>
+    </header>
 
-    <div class="stations-grid" style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+    <div class="stations-grid">
         @for (station of stations(); track station.id) {
+            <app-cooking-station-card 
+                [stationId]="station.id" 
+                [stationName]="station.name"
+                [temperature]="station.currentTemp" 
+                (turnOff)="handleTurnOff($event)"
+                (orderDish)="handleOrderDish(station.id, $event)">
+            </app-cooking-station-card>
+        }
+    </div>
 
-        <app-cooking-station-card [stationId]="station.id" [stationName]="station.name"
-            [temperature]="station.currentTemp" (turnOff)="handleTurnOff($event)">
-        </app-cooking-station-card>
-
+    <!-- Sistema de Notificaciones Local (Premium) -->
+    <div class="notifications-container">
+        @for (note of notifications(); track note.id) {
+            <div class="custom-toast success">
+                <div class="toast-content">
+                    <span class="toast-title">¡Plato Terminado!</span>
+                    <p class="toast-body">
+                        El plato <strong>{{ note.dishName }}</strong> está listo en la estación {{ note.stationId }}.
+                    </p>
+                </div>
+                <button 
+                    tuiIconButton 
+                    size="s" 
+                    appearance="flat" 
+                    iconStart="@tui.x"
+                    (click)="removeNotification(note.id)">
+                </button>
+            </div>
         }
     </div>
 </div>
